@@ -4,6 +4,11 @@ const Post = require("./api/post");
 const postData = new Post();
 
 
+app.use((req,res,next) => {
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    next();
+});
+
 app.get("/", (req,res) => {
     res.status(200).send("Hello World!");
 });

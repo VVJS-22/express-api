@@ -18,5 +18,10 @@
         "name": "Kruthika",
         "gender":"female",
         "place": "Madurai"
+    },
+    {
+        "name": "Bharani",
+        "gender": "female",
+        "place": " Chennai"
     }
 ]
