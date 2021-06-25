@@ -13,7 +13,7 @@ app.use((req,res,next) => {
     next();
 });
 
-app.use(express.json());
+router.use(express.json());
 
 
 router.get("/", (req,res) => {
