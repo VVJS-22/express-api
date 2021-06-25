@@ -1,5 +1,7 @@
 const express = require("express");
 const app = express();
+const serverless = require("serverless-http");
+const router = express.Router();
 const multer = require("multer");
 const upload = multer();
 const Post = require("./api/post");
@@ -14,20 +16,20 @@ app.use((req,res,next) => {
 app.use(express.json());
 
 
-app.get("/", (req,res) => {
+router.get("/", (req,res) => {
     res.status(200).send("Hello World!");
 });
 
 
-app.get("/greeting", (req,res) => {
+router.get("/greeting", (req,res) => {
     res.status(200).send("Good Evening!");
 });
 
-app.get("/api/posts", (req,res) => {
+router.get("/api/posts", (req,res) => {
     res.status(200).send(postData.get());
 });
 
-app.post("/api/posts",upload.none(), (req,res) => {
+router.post("/api/posts",upload.none(), (req,res) => {
     const newPost = {
         "name": req.body.name,
         "gender": req.body.gender,
@@ -37,6 +39,9 @@ app.post("/api/posts",upload.none(), (req,res) => {
     res.status(200).send("ok");
 })
 
+app.use('./netlify/functions/app',router)
 
 
-app.listen(3000, () => { console.log("App listnening on port: 3000")});
+// app.listen(3000, () => { console.log("App listnening on port: 3000")});
+
+module.exports.handler = serverless(app);
