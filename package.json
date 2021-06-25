@@ -6,16 +6,8 @@
     "start": "./node_modules/.bin/netlify-lambda serve src",
     "build": "./node_modules/.bin/netlify-lambda build src"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/VVJS-22/express-basics.git"
-  },
-  "author": "",
+  "author": "Jayesh Sugumaran",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/VVJS-22/express-basics/issues"
-  },
-  "homepage": "https://github.com/VVJS-22/express-basics#readme",
   "dependencies": {
     "express": "^4.17.1",
     "multer": "^1.4.2",

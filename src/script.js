@@ -39,7 +39,7 @@ router.post("/api/posts",upload.none(), (req,res) => {
     res.status(200).send("ok");
 })
 
-app.use('./netlify/functions/app',router)
+app.use('/.netlify/functions/app',router)
 
 
 // app.listen(3000, () => { console.log("App listnening on port: 3000")});
