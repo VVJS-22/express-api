@@ -39,8 +39,6 @@ app.post("/api/posts",upload.none(), (req,res) => {
 })
 
 
-app.listen(process.env.PORT || 3000, ()=> {
-    "App listening on port 3000";
-});
+app.listen(process.env.PORT || 3000);
 
 // module.exports.handler = serverless(app);
