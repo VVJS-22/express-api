@@ -1,5 +1,5 @@
 const fs = require("fs");
-const PATH = "data.json";
+const PATH = "/data.json";
 
 class Posts {
     get() {
