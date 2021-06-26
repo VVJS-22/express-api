@@ -1,5 +1,5 @@
 const fs = require("fs");
-const PATH = "./src/data.json";
+const PATH = "./data.json";
 
 class Posts {
     get() {
@@ -17,7 +17,7 @@ class Posts {
 
     add(newPost) {
         const data = this.readData();
-        data.unshift(newPost);
+        data.results.unshift(newPost);
         this.storeData(data);
     }
 
