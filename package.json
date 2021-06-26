@@ -1,12 +1,17 @@
 {
   "name": "express_trial",
   "version": "1.0.0",
+  "description": "",
   "main": "script.js",
-  "author": "Jayesh Sugumaran",
-  "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
     "multer": "^1.4.2",
     "serverless-http": "^2.7.0"
-  }
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "nodemon script.js"
+  },
+  "author": "",
+  "license": "ISC"
 }
