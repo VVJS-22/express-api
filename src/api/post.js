@@ -8,7 +8,7 @@ class Posts {
 
     readData() {
         try {
-            return JSON.parse(fs.readFileSync(PATH, 'utf8'));
+            return JSON.parse(fs.readFileSync({"results":[{"name":"suba","gender":"female","place":"gender"},{"name":"suba","gender":"female","place":"gender"},{"name":"Jayesh","gender":"male","place":"erode"},{"name":"Jagan","gender":"male","place":"Namakkal"},{"name":"Lakshmi","gender":"female","place":" Chennai"},{"name":"Kruthika","gender":"female","place":"Madurai"},{"name":"Bharani","gender":"female","place":" Chennai"}]}, 'utf8'));
         }catch (e) {
             console.log(e);
             return `error in json data ${e}`;
