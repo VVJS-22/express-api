@@ -2,16 +2,11 @@
   "name": "express_trial",
   "version": "1.0.0",
   "main": "script.js",
-  "scripts": {
-    "start": "./node_modules/.bin/netlify-lambda serve src",
-    "build": "./node_modules/.bin/netlify-lambda build src"
-  },
   "author": "Jayesh Sugumaran",
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
     "multer": "^1.4.2",
-    "netlify-lambda": "^2.0.10",
     "serverless-http": "^2.7.0"
   }
 }
