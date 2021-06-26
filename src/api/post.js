@@ -11,7 +11,7 @@ class Posts {
             return JSON.parse(fs.readFileSync(PATH, 'utf8'));
         }catch (e) {
             console.log(e);
-            return e;
+            return `error in json data ${e}`;
         }
     }
 
