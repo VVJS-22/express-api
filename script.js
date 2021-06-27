@@ -28,13 +28,12 @@ app.get("/api/posts", (req,res) => {
     res.status(200).send(postData.get());
 });
 
-app.post("/api/posts",upload.none(),async (req,res) => {
+app.post("/api/posts",upload.none(),(req,res) => {
     const newPost = {
         "name": req.body.name,
         "gender": req.body.gender,
         "place": req.body.place
     }
-    await newPost.save();
     postData.add(newPost);
     res.status(200).send("ok");
 })
